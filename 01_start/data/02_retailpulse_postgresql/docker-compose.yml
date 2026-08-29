@@ -1,0 +1,13 @@
+services:
+  postgres:
+    image: postgres:16
+    container_name: retailpulse_postgres
+    environment:
+      POSTGRES_DB: retailpulse
+      POSTGRES_USER: analyst
+      POSTGRES_PASSWORD: analyst
+    ports:
+      - "5433:5432"
+    volumes:
+      - ./sql:/docker-entrypoint-initdb.d
+      - ./csv:/csv

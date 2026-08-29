@@ -1,0 +1,10 @@
+SET search_path TO retail;
+\copy customers FROM '/csv/customers_clean.csv' WITH (FORMAT csv, HEADER true);
+\copy products FROM '/csv/products.csv' WITH (FORMAT csv, HEADER true);
+\copy orders FROM '/csv/orders_clean.csv' WITH (FORMAT csv, HEADER true);
+\copy order_items FROM '/csv/order_items_clean.csv' WITH (FORMAT csv, HEADER true);
+\copy returns FROM '/csv/returns.csv' WITH (FORMAT csv, HEADER true);
+\copy marketing_campaigns FROM '/csv/marketing_campaigns.csv' WITH (FORMAT csv, HEADER true);
+\copy customer_events FROM '/csv/customer_events_clean.csv' WITH (FORMAT csv, HEADER true);
+\copy support_tickets FROM '/csv/support_tickets.csv' WITH (FORMAT csv, HEADER true);
+\copy inventory_snapshots FROM '/csv/inventory_snapshots.csv' WITH (FORMAT csv, HEADER true);
