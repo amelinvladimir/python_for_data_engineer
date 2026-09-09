@@ -1,0 +1,23 @@
+services:
+  postgres:
+    image: postgres:16
+    container_name: pandas_numpy_sql_benchmark
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: benchmark
+      POSTGRES_USER: benchmark
+      POSTGRES_PASSWORD: benchmark
+    ports:
+      - "5428:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+      - ./init:/docker-entrypoint-initdb.d:ro
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U benchmark -d benchmark"]
+      interval: 5s
+      timeout: 5s
+      retries: 20
+    shm_size: "1gb"
+
+volumes:
+  postgres_data:
