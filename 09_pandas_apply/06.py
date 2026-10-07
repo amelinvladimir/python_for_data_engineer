@@ -1,5 +1,3 @@
-# Очень важно не превратить урок в “apply 
-
 import pandas as pd
 import numpy as np
 
