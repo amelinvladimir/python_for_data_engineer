@@ -21,3 +21,10 @@ outliers = df.loc[
 ]
 
 print(outliers)
+
+
+# q1 = 11,5
+# q3 = 13,5
+# iqr = q3 - q1 = 2
+# l = q1 - 1,5 * iqr = 11,5 - 1,5 * 2 = 8,5
+# m = q3 + 1,5 * iqr = 13,5 + 1,5 * 2 = 16,5
