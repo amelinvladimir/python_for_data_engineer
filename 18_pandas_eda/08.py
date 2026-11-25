@@ -19,7 +19,10 @@ df = pd.DataFrame({
 
 print(df.shape)
 print(df.info())
+print('---------------------------')
 print(df.describe())
+
+print('---------------------------')
 
 # Затем исследуем выручку
 
@@ -43,6 +46,8 @@ outliers = df[
     (df["revenue"] < q1 - 1.5 * iqr) |
     (df["revenue"] > q3 + 1.5 * iqr)
 ]
+
+print('---------------------------')
 
 print(outliers)
 
